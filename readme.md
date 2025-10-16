@@ -6,8 +6,8 @@ Vamos a practicar [Basic Routing](https://expressjs.com/en/starter/basic-routing
 
 ### 1. Fork & Clone
 
-- Haz clic en el botón **"Fork"** en la parte superior derecha de esta página de GitHub. Esto creará una copia del repositorio en tu cuenta de GitHub
-- Clona tu fork en tu ordenador.
+1. Haz **Fork** de este repositorio
+2. Clona tu fork y navega a la carpeta del proyecto
 
 ### 2. Configuración del Proyecto
 
