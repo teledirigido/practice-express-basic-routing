@@ -2,7 +2,14 @@
 
 Vamos a practicar [Basic Routing](https://expressjs.com/en/starter/basic-routing.html) con Node.js y Express.
 
-## Configuración
+## Primeros Pasos
+
+### 1. Fork & Clone
+
+- Haz clic en el botón **"Fork"** en la parte superior derecha de esta página de GitHub. Esto creará una copia del repositorio en tu cuenta de GitHub
+- Clona tu fork en tu ordenador.
+
+### 2. Configuración del Proyecto
 
 1. Instalar dependencias: `npm install`
 2. Crear un archivo `.env` basado en `.env.example` y configurar las variables de entorno
