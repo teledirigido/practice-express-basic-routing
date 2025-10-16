@@ -1,23 +1,23 @@
-## Practice
+## Práctica
 
-We will practice [Basic Routing](https://expressjs.com/en/starter/basic-routing.html) with Node.js and Express.
+Vamos a practicar [Basic Routing](https://expressjs.com/en/starter/basic-routing.html) con Node.js y Express.
 
-## Setup
+## Configuración
 
-1. Install dependencies: `npm install`
-2. Create a `.env` file based on `.env.example` and configure your environment variables
-3. Start the server: `npm start`
-4. Verify the server is running at `http://localhost:3000` (or your configured PORT)
-5. Use [Postman](https://postman.com) to test the endpoints
+1. Instalar dependencias: `npm install`
+2. Crear un archivo `.env` basado en `.env.example` y configurar las variables de entorno
+3. Iniciar el servidor: `npm start`
+4. Verificar que el servidor está corriendo en `http://localhost:3000` (o el PORT configurado)
+5. Usar [Postman](https://postman.com) para probar los endpoints
 
-## Understanding Routes
+## Entendiendo las Rutas
 
-Route definition takes the following structure:
+La definición de rutas tiene la siguiente estructura:
 ```js
 app.METHOD(PATH, HANDLER)
 ```
 
-An example of the above is the `GET` method on a root path:
+Un ejemplo de lo anterior es el método `GET` en la ruta raíz:
 
 ```js
 app.get('/', (req, res) => {
@@ -25,19 +25,19 @@ app.get('/', (req, res) => {
 })
 ```
 
-## Your Task
+## Tu Tarea
 
-Currently, we have a work-in-progress app where the routes are incomplete. Review the file structure, then complete the following iterations.
+Actualmente, tenemos una aplicación en desarrollo donde las rutas están incompletas. Revisa la estructura de archivos y luego completa las siguientes iteraciones.
 
 ---
 
-### Iteration 1: Get All Countries
+### Iteración 1: Obtener Todos los Países
 
-Create a route to retrieve all countries.
+Crea una ruta para obtener todos los países.
 
 **Endpoint:** `GET /countries`
 
-**Expected Response:**
+**Respuesta Esperada:**
 - **Status:** `200 OK`
 - **Body:**
 ```json
@@ -50,15 +50,15 @@ Create a route to retrieve all countries.
 
 ---
 
-### Iteration 2: Get a Country by ID
+### Iteración 2: Obtener un País por ID
 
-Create a route to retrieve a single country by its ID.
+Crea una ruta para obtener un único país por su ID.
 
 **Endpoint:** `GET /countries/:id`
 
-**Example:** `GET /countries/1`
+**Ejemplo:** `GET /countries/1`
 
-**Expected Response:**
+**Respuesta Esperada:**
 - **Status:** `200 OK`
 - **Body:**
 ```json
@@ -67,37 +67,37 @@ Create a route to retrieve a single country by its ID.
 
 ---
 
-### Iteration 3: Update a Country by ID
+### Iteración 3: Actualizar un País por ID
 
-Create a route that allows updating a country by its ID. You can use this to update any field (name, capital, code, etc.).
+Crea una ruta que permita actualizar un país por su ID. Puedes usar esto para actualizar cualquier campo (nombre, capital, código, etc.).
 
-**Endpoint:** `PUT /countries/:id` or `PATCH /countries/:id`
+**Endpoint:** `PUT /countries/:id` o `PATCH /countries/:id`
 
-**Example:** `PUT /countries/5`
+**Ejemplo:** `PUT /countries/5`
 
-**Request Body:**
+**Body de la Petición:**
 ```json
 { "capital": "Lisbon" }
 ```
 
-**Expected Response:**
+**Respuesta Esperada:**
 - **Status:** `200 OK`
-- **Body:** The updated country object
+- **Body:** El objeto del país actualizado
 ```json
 { "id": 5, "name": "Portugal", "capital": "Lisbon", "code": "PT", "flag": "🇵🇹" }
 ```
 
 ---
 
-### Iteration 4: Delete a Country by ID
+### Iteración 4: Eliminar un País por ID
 
-Create a route to delete a country by its ID.
+Crea una ruta para eliminar un país por su ID.
 
 **Endpoint:** `DELETE /countries/:id`
 
-**Example:** `DELETE /countries/5`
+**Ejemplo:** `DELETE /countries/5`
 
-**Expected Response:**
+**Respuesta Esperada:**
 - **Status:** `200 OK`
 - **Body:**
 ```json
@@ -106,33 +106,33 @@ Create a route to delete a country by its ID.
 
 ---
 
-### Iteration 5: Add a New Country
+### Iteración 5: Añadir un Nuevo País
 
-Create a route to add a new country to the list.
+Crea una ruta para añadir un nuevo país a la lista.
 
 **Endpoint:** `POST /countries`
 
-**Request Body:**
+**Body de la Petición:**
 ```json
 { "id": 16, "name": "Norway", "capital": "Oslo", "code": "NO", "flag": "🇳🇴" }
 ```
 
-**Expected Response:**
+**Respuesta Esperada:**
 - **Status:** `201 Created`
-- **Body:** The newly created country object
+- **Body:** El objeto del nuevo país creado
 ```json
 { "id": 16, "name": "Norway", "capital": "Oslo", "code": "NO", "flag": "🇳🇴" }
 ```
 
 ---
 
-### Iteration 6: Handle Errors
+### Iteración 6: Manejo de Errores
 
-Handle cases where a country ID doesn't exist. Return a `404` status code with an appropriate error message.
+Maneja los casos donde el ID del país no existe. Devuelve un código de Status `404` con un mensaje de error apropiado.
 
-**Apply to:** All routes that use `:id`
+**Aplicar a:** Todas las rutas que usan `:id`
 
-**Expected Response (when country not found):**
+**Respuesta Esperada (cuando el país no se encuentra):**
 - **Status:** `404 Not Found`
 - **Body:**
 ```json
@@ -144,28 +144,28 @@ Handle cases where a country ID doesn't exist. Return a `404` status code with a
 ## FAQ
 
 <details>
-<summary>1. What is the `.env` file and why do we need it?</summary>
+<summary>1. ¿Qué es el archivo `.env` y por qué lo necesitamos?</summary>
 
 <br>
 
-The `.env` file stores environment variables - configuration values that can change depending on where your app runs (development, production, etc.).
+El archivo `.env` almacena variables de entorno - valores de configuración que pueden cambiar dependiendo de dónde se ejecuta tu aplicación (desarrollo, producción, etc.).
 
-**Benefits:**
-- **Flexibility:** Change settings without modifying code (e.g., switch ports easily)
-- **Security:** Keep sensitive data (API keys, passwords) out of your code
-- **Best Practice:** Never commit `.env` to git (use `.env.example` instead)
+**Beneficios:**
+- **Flexibilidad:** Cambiar configuraciones sin modificar el código (ej. cambiar puertos fácilmente)
+- **Seguridad:** Mantener datos sensibles (claves API, contraseñas) fuera del código
+- **Buena Práctica:** Nunca hacer commit de `.env` a git (usar `.env.example` en su lugar)
 
-**How it works:**
-The `dotenv` package reads the `.env` file and makes variables available via `process.env.VARIABLE_NAME`.
+**Cómo funciona:**
+El paquete `dotenv` lee el archivo `.env` y hace las variables disponibles a través de `process.env.NOMBRE_VARIABLE`.
 
 </details>
 
 <details>
-<summary>2. What are `req.params` and `req.body`?</summary>
+<summary>2. ¿Qué son `req.params` y `req.body`?</summary>
 
 <br>
 
-**`req.params`** - Captures values from the URL path
+**`req.params`** - Captura valores de la ruta URL
 
 ```javascript
 // Route: GET /countries/:id
@@ -175,7 +175,7 @@ app.get('/countries/:id', (req, res) => {
 });
 ```
 
-**`req.body`** - Contains data sent in the request body (POST/PUT/PATCH)
+**`req.body`** - Contiene datos enviados en el Body de la petición (POST/PUT/PATCH)
 
 ```javascript
 // Route: POST /countries
@@ -186,77 +186,77 @@ app.post('/countries', (req, res) => {
 });
 ```
 
-**Key difference:** `req.params` comes from URL, `req.body` comes from request payload.
+**Diferencia clave:** `req.params` viene de la URL, `req.body` viene del payload de la petición.
 
 </details>
 
 <details>
-<summary>3. What HTTP status codes should I use?</summary>
+<summary>3. ¿Qué códigos de Status HTTP debo usar?</summary>
 
 <br>
 
-- **200 OK** - Successful GET, PUT, PATCH, or DELETE request
-- **201 Created** - Successful POST request (resource created)
-- **404 Not Found** - Requested resource doesn't exist
-- **400 Bad Request** - Invalid or missing data in request (optional for this exercise)
+- **200 OK** - Petición GET, PUT, PATCH o DELETE exitosa
+- **201 Created** - Petición POST exitosa (recurso creado)
+- **404 Not Found** - El recurso solicitado no existe
+- **400 Bad Request** - Datos inválidos o faltantes en la petición (opcional para este ejercicio)
 
 </details>
 
 <details>
-<summary>4. How do I test my endpoints without Postman?</summary>
+<summary>4. ¿Cómo puedo probar mis endpoints sin Postman?</summary>
 
 <br>
 
-**Option 1: cURL (command line)**
+**Opción 1: cURL (línea de comandos)**
 ```bash
 curl http://localhost:3000/countries
 curl http://localhost:3000/countries/1
 curl -X POST http://localhost:3000/countries -H "Content-Type: application/json" -d '{"id":16,"name":"Norway","capital":"Oslo","code":"NO","flag":"🇳🇴"}'
 ```
 
-**Option 2: VS Code REST Client extension**
-Install the "REST Client" extension and create a `.http` file with your requests.
+**Opción 2: Extensión REST Client de VS Code**
+Instala la extensión "REST Client" y crea un archivo `.http` con tus peticiones.
 
-**Option 3: Browser (GET requests only)**
-Simply navigate to `http://localhost:3000/countries` in your browser.
+**Opción 3: Navegador (solo peticiones GET)**
+Simplemente navega a `http://localhost:3000/countries` en tu navegador.
 
 </details>
 
 <details>
-<summary>5. Why isn't my `.env` file being read?</summary>
+<summary>5. ¿Por qué no se está leyendo mi archivo `.env`?</summary>
 
 <br>
 
-**Common issues:**
+**Problemas comunes:**
 
-1. **Missing `dotenv` configuration** - Make sure to import and configure dotenv at the top of `app.js`:
+1. **Falta la configuración de `dotenv`** - Asegúrate de importar y configurar dotenv al inicio de `app.js`:
    ```javascript
    import 'dotenv/config';
    ```
 
-2. **Wrong file name** - Must be exactly `.env` (not `.env.txt` or `env`)
+2. **Nombre de archivo incorrecto** - Debe ser exactamente `.env` (no `.env.txt` o `env`)
 
-3. **Wrong location** - The `.env` file should be in the project root directory (same level as `app.js`)
+3. **Ubicación incorrecta** - El archivo `.env` debe estar en el directorio raíz del proyecto (al mismo nivel que `app.js`)
 
-4. **Restart required** - Restart your server after creating or modifying `.env`
+4. **Reinicio requerido** - Reinicia el servidor después de crear o modificar `.env`
 
 </details>
 
 <details>
-<summary>6. How do I find a country by ID in the array?</summary>
+<summary>6. ¿Cómo encuentro un país por ID en el array?</summary>
 
 <br>
 
-Use JavaScript's array methods:
+Usa los métodos de arrays de JavaScript:
 
-**Find a country:**
+**Encontrar un país:**
 ```javascript
 const country = countries.find(c => c.id === parseInt(req.params.id));
 ```
 
-**Note:** `req.params.id` is a string, so convert it to a number with `parseInt()` or use `==` for loose comparison.
+**Nota:** `req.params.id` es un string, así que conviértelo a número con `parseInt()` o usa `==` para comparación flexible.
 
-**Find the index (for deleting):**
+**Encontrar el índice (para eliminar):**
 ```javascript
 const index = countries.findIndex(c => c.id === parseInt(req.params.id));
 if (index !== -1) {

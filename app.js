@@ -8,17 +8,17 @@ const countries = JSON.parse(readFileSync('./countries.json', 'utf-8'));
 
 app.use(express.json());
 
-// TODO: Create GET /countries route
+// Implementar GET /countries route
 
-// TODO: Create GET /countries/:id route
+// Implementar GET /countries/:id route
 
-// TODO: Create PUT /countries/:id route
+// Implementar PUT /countries/:id route
 
-// TODO: Create DELETE /countries/:id route
+// Implementar DELETE /countries/:id route
 
-// TODO: Create POST /countries route
+// Implementar POST /countries route
 
-// Do not edit this ⬇️
+// No edites esto ⬇️
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 }).on('error', (err) => {
