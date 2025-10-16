@@ -10,6 +10,25 @@ Vamos a practicar [Basic Routing](https://expressjs.com/en/starter/basic-routing
 4. Verificar que el servidor está corriendo en `http://localhost:3000` (o el PORT configurado)
 5. Usar [Postman](https://postman.com) para probar los endpoints
 
+## Estructura de los Archivos
+
+```bash
+practice-express-basic-routing/
+├── app.js              # Archivo principal del servidor Express
+├── countries.json      # Base de datos JSON con información de países
+├── package.json        # Dependencias y scripts del proyecto
+├── .env.example        # Plantilla para variables de entorno
+├── .env                # Tu archivo de configuración (crear manualmente)
+└── node_modules/       # Dependencias instaladas (generado por npm)
+```
+
+**Descripción de archivos clave:**
+
+- **app.js** - Aquí es donde crearás tus rutas. Este archivo ya tiene la configuración básica del servidor Express.
+- **countries.json** - Contiene un array de 15 países europeos con sus datos (id, nombre, capital, código, bandera).
+- **.env** - Archivo para almacenar variables de entorno como el puerto del servidor (debes crearlo basándote en `.env.example`).
+- **package.json** - Define las dependencias del proyecto (Express, dotenv) y los scripts npm disponibles.
+
 ## Entendiendo las Rutas
 
 La definición de rutas tiene la siguiente estructura:
